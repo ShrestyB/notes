@@ -1,13 +1,44 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("./components/DisplayNotes/DisplayNotes.css");
+@import url("./components/NewNote/NewNote.css");
+@import url("./components/Helpers/NoteBody.css");
+@import url("./components/Helpers/NoteTitle.css");
+@import url("./components/Helpers/NoteFooter.css");
+@import url("./components/DisplayNotes/NoteCard.css");
+@import url("./components/EditNote/EditNote.css");
+@import url("./components/Helpers/NoteFooterHelpers/ColourPicker.css");
+@import url("./components/Helpers/NoteFooterHelpers/LabelSelector.css");
+@import url("./components/SidePannel/EditLabel.css");
+@import url("./components/SidePannel/SidePannel.css");
+@import url("./components/Header/Header.css");
+
+:root {
+    --primary-colour: #202124;
+    --secondary-colour: #e8eaed;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    color: var(--secondary-colour);
+    background-color: var(--primary-colour);
+    outline: none;
+    font-size: 1rem;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+}
+
+.main-container {
+    margin-top: 6em;
+    margin-left: 23.125em;
+    min-height: 96vh;
+}
+
+.search{
+    margin-left: 100px;
+}
+.formatting-buttons{
+    width: auto;
 }

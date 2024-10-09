@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./index.css";
+import { NewNote } from "./components/NewNote/NewNote";
+import { SidePannel } from "./components/SidePannel/SidePannel";
+import { DisplayNotes } from "./components/DisplayNotes/DisplayNotes";
+import { EditNote } from "./components/EditNote/EditNote";
+import { useNotes } from "./ContextProviders/NotesContext";
+import { Header } from "./components/Header/Header";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export function App() {
+    const { addNote, newNoteFlag } = useNotes();
+    function saveOnOutOfFocus() {
+        if (newNoteFlag) {
+            addNote();
+        }
+    }
+
+    return (
+        <div className="App" onClick={saveOnOutOfFocus}>
+            <SidePannel />
+            <Header />
+            <div className="main-container">
+                <NewNote />
+                <DisplayNotes />
+                <EditNote />
+            </div>
+        </div>
+    );
 }
 
-export default App;

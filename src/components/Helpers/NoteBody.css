@@ -1,0 +1,45 @@
+.formatting-buttons {
+    display: flex;
+    margin-bottom: 10px;
+    /* background-color: rgba(8, 8, 8, 0.8);  */
+    padding: 5px; /* Space around buttons */
+    border-radius: 5px; /* Rounded corners */
+    /* box-shadow: 0 2px 4px rgb(255, 255, 255); Subtle shadow */
+    opacity: 0.5;
+    /* width: 100%; */
+    justify-content:space-evenly;
+
+}
+.highlighted-term {
+    background-color: yellow;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.formatting-buttons button {
+    border: 1px blanchedalmond solid;
+    background: none;
+    cursor: pointer;
+    width: auto ;
+    font-size: 18px;
+    /* margin-right: 10px; Space between buttons */
+    padding: 5px 10px; 
+    border-radius: 5px; /* Rounded button corners */
+}
+
+.formatting-buttons button:hover {
+    background-color: rgba(245, 122, 80, 0.2); /* Light blue on hover */
+}
+
+ .note-taker-body {
+    min-height: 40px;
+    padding: 10px;
+    /* border: 1px solid #ccc;  */
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    width: 100%; 
+    box-sizing: border-box; 
+    color: #000; 
+    direction: ltr;
+}
+
